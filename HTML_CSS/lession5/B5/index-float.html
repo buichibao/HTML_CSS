@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Nguyên lý 1: khi 2 box model sử dụng float vừa đủ kích thước của vùng chưa thì nằm trên 1 hàng,
+        Nếu nó bị dư 1px thì sẽ rơi xún hàng mới */
+        .div1 {
+            float: left;
+            width: 60%;
+            height: 200px;
+            /* border: 1px solid red; */
+            background-color: yellow;
+        }
+        .div2 {
+            float: left;
+            width: 40%;
+            height: 100px;
+            background-color: red;
+        }
+        /* Nguyên lý 2: Nếu đang sử dụng 2 box có float và box thứ 3 tiếp theo không dùng float thì box 3 sẽ trở về trạng thái bt của HTML */
+        .div3 {
+            width: 40%;
+            height: 100px;
+            background-color: blue;
+        }
+        .div4 {
+            width: 50%;
+            height: 200px;
+            background-color: green;
+        }
+        /* Nguyên lý 3:  */
+        .div5 {
+            float: right;
+            width: 30%;
+            height: 60px;
+            background-color: aqua;
+        }
+
+        .div6 {
+            width: inherit;
+            height: 100px;
+            background-color: rgb(255, 127, 127);
+        }
+    </style>
+</head>
+<body>
+    <!-- Có dùng float -->
+    <div class="div1">
+        <div class="div6"></div>
+    </div>
+    <div class="div2"></div>
+    <div class="div5"></div>
+    <!-- Ko dùng float -->
+    <div class="div3"></div>
+    <div class="div4"></div>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div1 {
+            /* Muôn thay đổi kích thước content */
+            width: 300px;
+            height: 200px;
+            /* Khoảng cách từ ngoài tính vô content là padding.Padding tăng thêm kích thước cho box-model */
+            /*Cả 4 hướng */
+            /* Xác định thông qua 1 giá trị */
+            padding: 1em;
+            /* Xác định thông qua 2 giá trị: top-bottom left-right */
+            padding: 1em 2em;
+            /* Xác định thông qua 4 giá trị: top right bottom left */
+            padding: 1em 2em 3em 4em;
+
+            /* Chi tiết từng hướng */
+            /* padding-top: ;
+            padding-left: ;
+            padding-right: ;
+            padding-bottom: ; */
+
+            /* Margin: khoảng cách tính từ viền ra ngoài. Margin không thay đổi kích thước của box model.
+            Cách dùng y như padding */
+            margin: 1em 2em;
+
+            /* Viển của box-model. Có ảnh hưởng đến kích thước của box-model
+            CP: border: độ_dày kiểu_viền màu_sắc */
+            /* Xác định cả 4 hướng. Ghi chi tiết từng css */
+            border-width: 5px;
+            border-style: double;
+            border-color: red;
+            /* Xác định chi tiết từng hướng */
+            border-top-width: 10px;
+            border-top-color: orange;
+            border-top-style: dashed;
+            /* Xác định 4 hướng viết tắt */
+            border: solid blue 1em;
+            /* Xấc định từng hướng viết tắt */
+            border-top: solid red 1em;
+            /* border-left: ;
+            border-right: ;
+            border-bottom: ; */
+
+            /* Bo góc: border-radius */
+            /* 1 giá trị thì cả 4 góc */
+            border-radius: 45%;
+            /* 2 giá trị: top-left top-right */
+            border-radius: 20px 100px;
+            /* 3 giá trị: top-left top-right bottom-right */
+            border-radius: 20px 10px 30px;
+            /* 4 giá trị: top-left top-right bottom-right bottom-left */
+            border-radius: 10px 20px 30px 40px;
+            /* Chỉ định chi tiết từng góc */
+            /* border-top-left-radius: ;
+            border-top-right-radius: ;
+            border-bottom-left-radius: ;
+            border-bottom-right-radius: ; */
+
+            /* Tạo bóng: box-shadow: [inset] trục_x trục_y độ_dày_bóng màu_sắc */
+            /* Tạo bóng ngoài đổ */
+            box-shadow: 10px 20px 20px green;
+            /* Tạo bóng ngoài ko đổ (bòng viền) */
+            box-shadow: 0 0 20px red;
+            /* Tạo bóng trong đổ */
+            /* box-shadow: inset 20px 10px 20px green; */
+            /* Tạo bóng trong không đổ */
+            /* box-shadow: inset 0 0 20px yellow; */
+
+            /* Màu nền */
+            background-color: hsl(300, 100%, 45%);
+            /* Ảnh nền sẽ nằm trên màu nền */
+            background-image: url('C200.png');
+            /* Kích thước ảnh nền: background-size: width height; */
+            background-size: 200px 100px;
+            /* Chế độ lặp ảnh nền: background-repeat: (norepeat hoặc repeat) */
+            background-repeat: no-repeat;
+            /* Vị trí ảnh nền: background-position: */
+            background-position: center center;
+        }
+        .div2 {
+            /* Tổng kích thước 200px , padding 10px*/
+            width: 180px;
+            height: 80px;
+            padding: 10px;
+
+            border: 0.5px solid hsl(250, 80%, 30%);
+            border-radius: 3px;
+            /* Outline: độ_dày kiểu màu_sắc; */
+            outline-width: 5px;
+            outline-style: solid;
+            outline-color: red;
+            /* Viết tắt */
+            outline: 0.2px solid hsl(250, 60%, 60%);
+
+            box-shadow: 0 0 10px hsl(250, 60%, 70%);
+        }
+    </style>
+</head>
+<body>
+    <div class="div1">Hello world</div>
+    <div class="div2">Chào mọi người</div>
+</body>
+</html>

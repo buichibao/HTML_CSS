@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div.chao {
+           
+            position: absolute;
+            animation: chuchay 5s linear infinite;
+
+        }
+
+        div.btn {
+            position: absolute;
+            top: 30px;
+            width: 100px;
+            text-align: center;
+            padding: 12px 30px;
+            border-radius: 5px;
+            color: white;
+            background-color: orangered;
+            animation: btn linear 2s infinite;
+        }
+
+        div.btn:hover {
+            animation-play-state: paused;
+        }
+
+        div.btn:hover+div.chao {
+            animation-play-state: paused;
+        }
+
+        @keyframes btn {
+            from {
+                background-color: orangered;
+            }
+
+            to {
+                background-color: red;
+                box-shadow: 0 0 30px yellow;
+            }
+        }
+
+        @keyframes chuchay {
+            0% {
+                top: 0;
+                right: 0;
+            }
+
+            50% {
+                top: 0;
+                right: 500px;
+            }
+
+            100% {
+                top: 0;
+                right: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="btn">Button</div>
+    <div class="chao">Xin chào mọi người</div>
+</body>
+
+</html>

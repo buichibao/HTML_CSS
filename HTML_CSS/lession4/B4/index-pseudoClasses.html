@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Pseudo Classes: 
+            Cú pháp: selector:pseudo_class { css } */
+        /* Trang thái re chuột vào phần tử */
+        h1:hover {
+            text-decoration: overline;
+        }
+        h1:active {
+            font-style: italic;
+        }
+        /* Trang thái của thẻ a */
+        /* Chưa vào thẻ a lần nào */
+        a:link {
+            color: brown;
+            text-shadow: 0 0 10px red;
+        }
+        a:hover {
+            color: purple;
+        }
+        /* Đang click vào thẻ a (kích hoạt) */
+        a:active {
+            color: green;
+        }
+        /* Đã từng truy cập vào link ở thẻ a. Chỉ sử dụng đc 1 số css*/
+        a:visited {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hello world</h1>
+    <a href="https://www.google.com">Click me!</a>
+</body>
+</html>

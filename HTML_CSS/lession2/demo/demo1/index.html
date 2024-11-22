@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Thẻ IMG:
+            - Thuộc tính src: đường dẫn hình ảnh
+            - Thuộc tính alt: hiện văn bản khi ảnh bị lỗi hoặc ko có (Chuẩn SEO)
+            - Thuộc tính align: vị trí hiển thị hình ảnh (left - right) - Hạn chế dùng
+            - Thuộc tính width, height: chiều dài, cao -->
+    <img src="https://cdnmedia.baotintuc.vn/2018/05/27/10/18/Reuters.jpg" alt="Ảnh không thể hiển thị" width="500px"
+        align="right">
+
+    <!--Thẻ figure
+       - Tạo khung nhìn cho ảnh , biểu đồ, tách hình ảnh ra khỏi nội dung
+       - thường chứa img và figcaption
+    -->
+    <figure>
+        <img src="https://cdnmedia.baotintuc.vn/2018/05/27/10/18/Reuters.jpg" alt="Ảnh không thể hiển thị"
+            width="500px">
+        <figcaption>CR7 ăn mừng danh hiệu <abbr title="Champonlauges">C1</abbr> thứ 5</figcaption>
+    </figure>
+    <!--
+      -div tạo vùng chứa HTML
+      -p đoạn văn
+      -small văn bản nhỏ
+      -big văn bản lớn (ít dùng nên dùng front-size : css)
+      -bdo đảo ngược văn bản ( không cần quan tâm)
+    -->
+    <div>
+        <p>Đây là đoạn văn viế trong thẻ p và thẻ p này được bọc trong thẻ div</p>
+        <small>Chữ nhỏ nè</small><br>
+        <big>Chữ to nè</big><br>
+        <bdo dir="ltr">Viết ngược</bdo>
+        <bdo dir="rtl">Viết ngược</bdo>
+    </div>
+
+    <!--
+       Thẻ a siêu liên kết
+       Dùng để : - Liên kết các trang web với nhau , liên kết trang web bên ngoài
+                 - Liên kết các tài liệu bên ngoài
+                 - Thực hiện mã JS
+                 - Gửi HTTTP request tới webserver = phương thức GET qua URL
+       Thuộc tính :
+                -href = link liên kết
+                -target = cách mở tab ( _self , _blank , _top , _parent)
+                -download = tải file với href được khai báo                
+    --><a href="xuly.php">Gửi Request</a> 
+    <a href="google.com" target="_blank">Google</a>
+    <a href="https://cdnmedia.baotintuc.vn/2018/05/27/10/18/Reuters.jpg" download="Tải file">Tải ảnh</a>
+    
+</body>
+
+</html>

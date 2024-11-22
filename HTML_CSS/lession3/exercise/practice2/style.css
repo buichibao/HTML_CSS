@@ -1,0 +1,28 @@
+main {
+    width: 900px;
+    box-shadow: 0px 5px 10px black;
+}
+.company-name{
+    text-align: center;
+    color: pink;
+}
+img{
+    width: 300px;
+    height: 300px;
+}
+.category {
+    color: white;
+    font-weight: bold;
+    background-color: pink;
+    display: inline-block;
+}
+
+.copyright{
+  color: blueviolet;
+}
+
+.footer{
+    background-color:rgb(234, 216, 240);
+    font-weight: bold;
+    color: blue;
+}

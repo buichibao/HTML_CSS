@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            /*C1: Sử dụng tên màu */
+            background-color: red;
+        }
+        p.style1 {
+            /* C2: sử dụng màu hệ số 10 rgb(hệ số đỏ, hệ số green, hệ số blue) */
+            background-color: rgb(100, 150, 120);
+        }
+        p.style2 {
+            /* C3: hệ số 16 */
+            background-color: #F37121;
+        }
+        p.style3 {
+            /* C4: sử dụng hsl(chỉ số màu chính trong bảng vòng tròn màu, cường độ màu, độ sáng của màu) */
+            background-color: hsl(50, 50%, 50%);
+        }   
+        
+
+        /* Cộng dồn thêm css cho 1 selector */
+        p.style3 {
+            color: red!important;
+        }
+        
+    </style>
+</head>
+<body>
+    <p>Hello world</p>
+    <p class="style1">Chào mọi người</p>
+    <p class="style2">Bonjour</p>
+    <!-- Ghi đè css theo độ ưu tiên của css -->
+    <p class="style3" style="color: purple;">HIHI ĐỒ NGỐC</p>
+</body>
+</html>

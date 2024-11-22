@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Căn lề nội dung trong table (Đối với toàn cấu trúc của table). Còn nếu sử dụng cho 1 nào đó thôi thì dùng thuộc tinh @align */
+        table tr>td {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Table có 2 tác dụng chính:
+        - Tạo layout (đối với web ko cần seo)
+        - Tạo bảng lưu trữ dữ liệu (Chính) -->
+    <h3>Table cơ bản</h3>
+    <table border="3">
+        <!-- Phần tử viết mô tả cho table. Caption của table chỉ nằm trên đầu của bảng và căn giữa -->
+        <caption>Bảng basic</caption>
+        <!-- Hàng tiêu đề thường là hàng đầu tiên-->
+        <!-- Hàng: table row (<tr>) -->
+        <tr>
+            <!-- Ô tiêu đề: table header (<th>) in đậm, căn giữa -->
+            <th>STT</th>
+            <th>Tên</th>
+            <th>Sđt</th>
+            <th>Địa chỉ</th>
+        </tr>
+        <!-- Những hàng tiếp theo ko phải tiêu để dùng để lưu trữ dữ liệu -->
+        <tr>
+            <!-- Ô dữ liệu: table detail (<td>) in thường, căn trái -->
+            <td>1</td>
+            <td>Nguyễn Văn A</td>
+            <td>0905123123</td>
+            <td>Đà Nẵng</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Trần Thị B</td>
+            <td>0905234234</td>
+            <td>Quảng Nam</td>
+        </tr>
+    </table>
+    <h3>Gộp ô</h3>
+    <table border="3">
+        <tr>
+            <td></td>
+            <td></td>
+            <td colspan="2"></td>
+
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td colspan="2" rowspan="2"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td rowspan="2"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+
+    <!-- Trường hợp sử dụng table làm layouts -->
+    <h3>Sử dụng table làm layouts</h3>
+    <table border="1" style="width: 100%;">
+        <tr>
+            <td colspan="2">
+                <header>Header</header>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <nav>
+                    <ul>
+                        <li>Quản lý ng dùng</li>
+                        <li>Quản lý sản phẩm</li>
+                    </ul>
+                </nav>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <main>Quản lý ở đây</main>
+            </td>
+            <td>
+                <aside>Menu phụ</aside>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <footer>Footer</footer>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>

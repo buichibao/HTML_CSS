@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            /* CSS dùng để gộp viền trong bảng */
+            border-collapse: collapse;
+        }
+        table > thead {
+            background-color: green;
+            color: white;
+        }
+        table > thead > tr:first-child {
+            color: red;
+        }
+        table > tbody {
+            background-color: yellow;
+        }
+        table > tbody > tr {
+            height: 100px;
+        }
+        /* Selector cho phần tử con hoặc bên trong theo vị trí chẵn (2, 4, 6 ....) */
+        table > tbody > tr:nth-child(2n) {
+            background-color: blue;
+            color: white;
+        }
+        /* Selector cho phần tử con hoặc bên trong theo vị trí lẽ (1, 3, 5 ....) */
+        table > tbody > tr:nth-child(2n + 1) {
+            background-color: orange;
+            color: white;
+        }
+        table > tbody > tr > td {
+            text-align: center;
+        }
+        table > tfoot > tr:last-child {
+            color: purple;
+            font-style: italic;
+        }
+        table > tbody > tr:hover {
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <!-- Nhóm table (3 nhóm) có 2 tác dụng chính:
+        - Viết css cho table dễ dàng hơn
+        - Dùng để xử lý vs js dễ dàng hơn -->
+    <table border="1">
+        <!-- thead: nhóm những hàng tiêu đề (1 table chỉ có 1 thead) -->
+        <thead>
+            <tr>
+                <th rowspan="2" style="width: 100px;">STT</th>
+                <th colspan="2">Tên đầy đủ</th>
+                <th colspan="3">Địa chỉ</th>
+            </tr>
+            <tr>
+                <th>Họ</th>
+                <th style="width: 200px;">Tên</th>
+                <th>Đường</th>
+                <th>Phường và quận</th>
+                <th>Thành phố</th>
+            </tr>
+        </thead>
+        <!-- tbody: nhóm những hàng chưa dữ liệu (1 table có thể có nhiều tbody) -->
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Nguyễn</td>
+                <td>Văn A</td>
+                <td>Điện biên phủ</td>
+                <td>Thanh khê</td>
+                <td>Đà nẵng</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Nguyễn</td>
+                <td>Thị B</td>
+                <td>Điện biên phủ</td>
+                <td>Thanh khê</td>
+                <td>Đà nẵng</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Nguyễn</td>
+                <td>Văn A</td>
+                <td>Điện biên phủ</td>
+                <td>Thanh khê</td>
+                <td>Đà nẵng</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Nguyễn</td>
+                <td>Thị B</td>
+                <td>Điện biên phủ</td>
+                <td>Thanh khê</td>
+                <td>Đà nẵng</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Nguyễn</td>
+                <td>Văn A</td>
+                <td>Điện biên phủ</td>
+                <td>Thanh khê</td>
+                <td>Đà nẵng</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Nguyễn</td>
+                <td>Thị B</td>
+                <td>Điện biên phủ</td>
+                <td>Thanh khê</td>
+                <td>Đà nẵng</td>
+            </tr>
+        </tbody>
+        <!-- tfoot: nhóm nội dung chân bảng. Thường sẽ là tổng kêt, tổng hợp, mô tả (1 table chỉ có 1 tfoot) -->
+        <tfoot>
+            <tr>
+                <th colspan="5">Tổng nhân viên:</th>
+                <th>2</th>
+            </tr>
+            <tr>
+                <th colspan="6">
+                    Nhóm bảng
+                </th>
+            </tr>
+        </tfoot>
+    </table> 
+</body>
+</html>

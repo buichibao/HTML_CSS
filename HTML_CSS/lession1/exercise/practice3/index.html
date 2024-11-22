@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Bắt đầu một session trong PHP</h2>
+
+    <p>Trước tiên, bạn cần khởi tạo session trong PHP bằng cách sử dụng <code>session_start()</code>. Điều này
+        thường được thực hiện ở đầu trang PHP trước khi gửi bất kỳ nội dung nào đến trình duyệt.</p>
+    <p>Khi sử dụng <code>$_SESSION</code>, bạn cần khởi tạo session bằng cách gọi hàm <code>session_start()</code>.
+        Điều này thường được thực hiện ở đầu file PHP.</p>
+
+    <div>
+        <code>
+            <pre>
+    &lt;?php
+
+        session_start();
+
+          if(isset[$_SESSION[counter]]){
+
+            $_SESSION[counter] += 1;
+
+          } else {
+
+                $_SESSION[counter] = 1;
+                
+          }
+              
+   ?></pre>
+        </code>
+    </div>
+</body>
+
+</html>

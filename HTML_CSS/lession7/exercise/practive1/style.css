@@ -1,0 +1,32 @@
+form{
+    border: 1px solid grey;
+    width: 700px;
+}
+form>p:first-child{
+    color: brown;
+    margin-left: 30px;
+}
+div.lable{
+    width: 150px;
+    height: 280px;
+    margin-right: 20px;
+    float: left;
+    text-align: end;
+}
+
+div.lable p {
+    margin-top: 0;
+    margin-bottom: 32px;
+}
+
+div.input input{
+    height: 30px;
+    width: 350px;
+}
+
+div.input button{
+    color: aliceblue;
+    background-color: rgb(197, 42, 42);
+    padding: 8px 20px;
+    border: none;
+}

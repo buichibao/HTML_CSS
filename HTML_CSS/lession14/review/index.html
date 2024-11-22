@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Grid layout giúp tạo bố cục, sắp xếp phần tử theo dạng lưới, hàng, cột. */
+        .div1 {
+            height: 600px;
+            outline: 1px solid red;
+            /* B1: tạo grid layout */
+            display: grid;
+            /* B2: chỉ định hàng côt và hàng */
+            /* Cách này phù hợp khi số lượng hàng và cột ít */
+            /* Chỉ định kích thước của hàng */
+            grid-template-rows: 200px 200px;
+            /* 2 hàng */
+            /* Chỉ định kích thước của cột  */
+            grid-template-columns: 200px 200px 200px;
+            /* 3 cột */
+
+            /* SẮP XẾP LINH HOẠT */
+            /* Căn chỉnh vị trí các phần tử theo chiều ngang với các giá trị */
+            /* Tất cả phần tử trên nhiều hàng: start, end, center, space-between, space-around, space-evenly
+                Lưu ý khi dùng thuộc tính này phải có width của grid-container */
+            justify-content: space-evenly;
+            /* Tất cả phần tử : start, end, center. LƯU Ý khi dùng thuộc tihs này thì phải chỉ định width và height cho cái phần tử bên trong (grid cell)*/
+            /* justify-items: end; */
+
+            /* Căn chỉnh vị trí phần tử theo chiều dọc với các giá trị  */
+            /* Tất cả phần tử : start, end, center. LƯU Ý khi dùng thuộc tihs này thì phải chỉ định width và height cho cái phần tử bên trong (grid cell)*/
+            /* align-items: end; */
+            /* Tất cả phần tử trên nhiều hàng: start, end, center, space-between, space-around, space-evenly
+                Lưu ý khi dùng thuộc tính này phải có height của grid-container */
+            align-content: space-evenly;
+
+        }
+        .div1 div:first-child {
+            width: 100px;
+            /* Ngang Cho 1 phần tử riêng : start, end, center. */
+            justify-self: center;
+        }
+        .div1 div:last-child {
+            height: 100px;
+            /* Dọc Cho 1 phần tử riêng lẻ : start, end, center. */
+            align-self: center;
+        }
+
+        .div1 div {
+            /* margin: 20px; */
+            /* width: 100px;
+            height: 100px; */
+            margin: 10px;
+            background-color: red;
+        }
+
+        .div2 {
+            width: 1000px;
+            height: 400px;
+            outline: 1px solid red;
+            /* B1 */
+            display: grid;
+            /* B2: tạo track thông qua hàm repeat(số lần lặp, track-list) sử dụng tại thuộc tính css grid-template: hàng / cột; */
+            /* Phù hợp khi làm nhiều hàng và cột */
+            /* grid-template: repeat(2, 200px) / repeat(3, 200px); */
+            /* grid-template: repeat(2, 1fr) / repeat(3, 1fr); Khi dùng fr thì phải có width và height của grid-container */
+            /* grid-template: repeat(2, 1fr) / 100px 20% 1fr; */
+            grid-template: repeat(2, 1fr) / repeat(3, 200px 1fr);
+        }
+
+        .div2 div {
+            margin: 20px;
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="div1">
+        <!-- B3: tạo vùng chứa tham chiếu đề hiển thị -->
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div class="div2">
+        <!-- B3: tạo vùng chứa tham chiếu đề hiển thị -->
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</body>
+
+</html>

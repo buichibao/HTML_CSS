@@ -1,0 +1,33 @@
+table{
+    width: 700px;
+}
+table , table tr>td{
+    border: 2px solid red;
+    border-collapse: collapse;
+}
+
+table .row1-td1{
+    background-color: red;
+    color: aliceblue;
+    font-weight: bold;
+    text-align: end;
+}
+
+table .row3{
+    background-color: palevioletred;
+    color: rgb(137, 31, 31);
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+table .row3 span{
+    text-transform: uppercase;
+    font-size: 1.5rem;
+}
+
+table .row4 dl{
+    list-style-type: square;
+}
+
+

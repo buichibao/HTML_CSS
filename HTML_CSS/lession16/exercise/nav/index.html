@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+
+        nav {
+            padding: 0;
+            margin: 0;
+            height: 80px;
+        }
+
+        nav>ul {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            display: flex;
+        }
+
+        nav>ul>li {
+            width: 100%;
+            text-align: center;
+            list-style-type: none;
+            padding: 30px;
+            background-color: aqua;
+        }
+
+        nav>ul>li:hover {
+            background-color: beige;
+        }
+
+        li.product {
+            position: relative;
+        }
+
+        li.product ul.dropdown-product {
+            height: 0;
+            width: 100%;
+            position: absolute;
+            top: 80px;
+            right:0;;
+            overflow: hidden;
+            transition: all linear 1s;
+        }
+
+        li.product:hover ul.dropdown-product {
+            height: 160px;
+        }
+
+        li.product .dropdown-product li {
+            list-style-type: none;
+            padding: 30px;
+            background-color: aqua;
+        }
+
+        li.contact {
+            position: relative;
+        }
+        li.contact:hover ul.dropdown-contact{
+            height: 160px;
+            top:80px;
+            right:0;
+        }
+        li.contact ul.dropdown-contact{
+            height: 0;
+            overflow: hidden;
+            width: 100%;
+            position: absolute;
+            top:80px;
+            right:400%;
+            transition: all linear 0.5s;
+        }
+        li.contact ul.dropdown-contact li{
+            list-style-type: none;
+            background-color: aqua;
+            padding: 30px;
+        } 
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>Category</li>
+            <li class="product">Product
+                <ul class="dropdown-product">
+                    <li>Product Sale</li>
+                    <li>Product Hot</li>
+                </ul>
+            </li>
+            <li>Comment</li>
+            <li class="contact">Contact
+                <ul class="dropdown-contact">
+                    <li>Hotline</li>
+                    <li>Email</li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</body>
+
+</html>

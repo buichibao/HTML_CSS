@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    nav {
+        height: 80px;
+        background-color: aqua;
+    }
+
+    nav>ul {
+        display: flex;
+        margin: 0;
+
+
+    }
+
+    nav>ul>li {
+        width: 100%;
+        height: 50px;
+        list-style-type: none;
+        text-align: center;
+        padding-top: 30px;
+    }
+
+    nav>ul>li:hover  {
+        background-color: blanchedalmond;
+    }
+    nav>ul>li:nth-child(2){
+        position: relative;
+        
+    }
+    
+    nav>ul>li:nth-child(2):hover ul.menu-con {
+        top:100%;
+        left: -40px;  
+        overflow: 
+        auto;
+        
+    }
+    
+    ul.menu-con {
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+        margin: 0;
+        position: absolute;
+        top:0;
+        left: -40px;
+        transition: all 2s ease 0s;
+    }
+
+    ul.menu-con li {
+        list-style-type: none;
+        background-color: aqua;
+        text-align: center;
+        padding: 30px 0;
+    }
+</style>
+
+<body>
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>Home 
+                <ul class="menu-con">
+                    <li>Sản phẩm hot</li>
+                    <li>Sản phẩm hot</li>
+                </ul>
+            </li>
+            <li>Home</li>
+            <li>Home</li>
+        </ul>
+    </nav>
+
+</body>
+
+</html>

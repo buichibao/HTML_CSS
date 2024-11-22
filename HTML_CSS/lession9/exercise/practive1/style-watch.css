@@ -1,0 +1,159 @@
+main {
+    width: 90%;
+    margin: 10px auto 0px;
+}
+main.watch-main article{
+    width: 70%;
+    height: 1000px;
+    float: left;
+}
+main.watch-main article section{
+    width: 100%;
+}
+
+main.watch-main article iframe{
+    width: 100%;
+    height: 520px;
+    border-radius: 10px;
+  
+}
+
+.watch-main .under-video{
+    height: 100px;
+}
+
+.watch-main .under-video .infor-changnel{
+    width: 50%;
+    height: 100px;
+    float: left;
+}
+.watch-main .under-video .avatar{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: blueviolet;
+    float: left;
+    margin-right: 10px;
+}
+
+.watch-main .under-video .changnel-name{
+    float: left;
+    margin-right: 50px;
+}
+.watch-main .under-video .changnel-name h6{
+    margin-bottom: 0;
+}
+.watch-main .under-video .changnel-name p{
+    color: rgb(102, 99, 99);
+    font-size: smaller;
+}
+.infor-changnel .subscrice button{
+    background-color: black;
+    color: white;
+    font-weight: 450;
+    padding: 4px 10px;
+    border-radius: 25px;
+}
+
+.watch-main .under-video .action {
+    width: 50%;
+    float: left;
+}
+
+.watch-main .under-video .action .like-dislike{
+    width: 30%;
+    float: left;
+}
+.watch-main .under-video .action .search{
+    width: 25%;
+    float: left;
+}
+.watch-main .under-video .action .down{
+    width: 30%;
+    float: left;
+}
+
+.watch-main .under-video .action .menu{
+    width: 5%;
+    float: left;
+}
+
+.watch-main .under-video .action button{
+  background-color: rgb(229, 226, 226);
+  border-radius: 25px;
+  padding: 6px 10px;
+  border: none;
+}
+
+
+main.watch-main aside{
+    width: 28%;
+    height: 1000px;
+    float: right;
+}
+
+.watch-main .description .box{
+    width: 49%;
+    height: 100px;
+    background-color: rgb(237, 233, 233);
+    border-radius: 10px;
+    float: left;
+    margin: 2px;
+}
+aside nav {
+    margin-top: 0;
+}
+aside nav ul{
+    margin-top: 0;
+}
+aside nav ul li {
+    list-style-type: none;
+    float: left;
+    padding: 5px 10px;
+    background-color: rgb(225, 223, 227);
+    border-radius: 5px;
+}
+.list-video{
+  height: auto;
+}
+.list-video .item{
+   clear: right;
+   height: 140px;
+   width: 100%;
+   margin-bottom: -20px;
+}
+
+.list-video .item .video{
+    width: 40%;
+    height: auto;
+    margin-right: 1%;
+    float: left;
+}
+
+.list-video .item .video img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.list-video .item .description-video{
+    width: 59%;
+    float: left;
+}
+.list-video .item .description-video h6{
+     margin-bottom: 0;
+}
+.list-video .item .description-video p{
+    font-size: smaller;
+    margin-bottom: 0;
+}
+
+.list-video .item .description-video p i{
+    font-size: 5px;
+    vertical-align: middle;
+}
+.list-video .item .description-video p.new{
+    width: 34px;
+    padding: 2px 5px;
+    border-radius: 5px;
+    background-color: rgb(237, 235, 232); 
+}

@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div.sky {}
+
+        div.sun {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            animation: sun 2s linear infinite;
+        }
+
+        div.cloud {
+            width: 300px;
+            position: absolute;
+            animation: maybay 10s linear infinite;
+        }
+
+        div.cloud1 {
+            width: 150px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: rgb(0, 187, 255);
+            position: relative;
+        }
+
+        div.cloud2 {
+            width: 150px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: rgb(0, 187, 255);
+            position: relative;
+            top: -150px;
+            left: 50px;
+        }
+
+        div.cloud3 {
+            width: 150px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: rgb(0, 187, 255);
+            position: relative;
+            top: -200px;
+            left: 120px;
+        }
+
+        div.nui {
+            display: flex;
+        }
+
+        div.nui1 {
+            width: 250px;
+            height: 400px;
+            background-color: greenyellow;
+            border-top-left-radius: 50%;
+            border-top-right-radius: 50%;
+        }
+
+        div.nui2 {
+            width: 250px;
+            height: 400px;
+            background-color: greenyellow;
+            border-top-left-radius: 50%;
+            border-top-right-radius: 50%;
+        }
+
+        div.nui3 {
+            width: 250px;
+            height: 400px;
+            background-color: greenyellow;
+            border-top-left-radius: 50%;
+            border-top-right-radius: 50%;
+        }
+
+        div.dengiaothong{
+            width: 100px;
+            height: 300px;
+            position: relative;
+        }
+        div.dengiaothong div.den {
+            width: 50px;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            border: 1px solid black;
+            padding: 10px;
+            position: absolute;
+        }
+        div.den .do {
+            width: 50px;
+            height: 50px;
+            border: 1px solid red;
+            background-color: red;
+            border-radius: 50%;
+
+        }
+        div.den .vang {
+            width: 50px;
+            height: 50px;
+            border: 1px solid yellow;
+            background-color: yellow;
+            border-radius: 50%;
+        }
+        div.den .xanh {
+            width: 50px;
+            height: 50px;
+            border: 1px solid green;
+            background-color: green;
+            border-radius: 50%;
+        }
+        div.cot {
+            
+            width: 20px;
+            height: 200px;
+            background-color: black;
+            position: absolute;
+            top: 185px;
+            left: 26px;
+        }
+        div.road {
+            height: 350px;
+            background-color: gray;
+            display: flex;
+            gap: 60px;
+            align-items: center;
+            position: absolute;
+            bottom: 0;
+        }
+
+        div.gach {
+            width: 200px;
+            height: 30px;
+            background-color: yellow;
+        }
+
+        div.car-red {
+            width: 200px;
+            position: absolute;
+            top: 10px;
+            animation: dichuyenxe1 linear 10s infinite;
+        }
+
+        div.car-red div.head {
+            width: 100px;
+            height: 50px;
+            background-color: red;
+            position: relative;
+            left: 50px;
+        }
+
+        div.car-red div.body {
+            width: 200px;
+            height: 50px;
+            background-color: red;
+        }
+
+        div.car-red div.b1 {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            background-color: black;
+            position: absolute;
+            left: 10px;
+            top: 90px;
+            animation: xoaybanh1 10s linear infinite;
+        }
+
+        div.car-red div.b2 {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            background-color: black;
+            position: absolute;
+            left: 140px;
+            top: 90px;
+            animation: xoaybanh1 10s linear infinite;
+        }
+
+        div.car-blue {
+            width: 200px;
+            position: absolute;
+            top: 200px;
+            right: 0;
+            animation: dichuyenxe2 linear 10s infinite;
+        }
+
+        div.car-blue div.head {
+            width: 100px;
+            height: 50px;
+            background-color: blue;
+            position: relative;
+            left: 50px;
+        }
+
+        div.car-blue div.body {
+            width: 200px;
+            height: 50px;
+            background-color: blue;
+        }
+
+        div.car-blue div.b1 {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            background-color: black;
+            position: absolute;
+            left: 10px;
+            top: 90px;
+            animation: xoaybanh2 10s linear infinite;
+        }
+
+        div.car-blue div.b2 {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            background-color: black;
+            position: absolute;
+            left: 140px;
+            top: 90px;
+            animation: xoaybanh2 10s linear infinite;
+        }
+
+        @keyframes xoaybanh1 {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            50% {
+                transform: rotate(360deg);
+            }
+
+            100% {
+                transform: rotate(0deg);
+            }
+        }
+
+        @keyframes xoaybanh2 {
+            0% {
+                transform: rotate(360deg);
+            }
+
+            50% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes dichuyenxe1 {
+            0% {
+                transform: translate(0, 0);
+            }
+
+            50% {
+                transform: translate(1200px, 0);
+            }
+
+            100% {
+                transform: translate(0, 0);
+            }
+        }
+
+        @keyframes dichuyenxe2 {
+            0% {
+                transform: translate(0, 0);
+            }
+
+            50% {
+                transform: translate(-1200px, 0);
+            }
+
+            100% {
+                transform: translate(0, 0);
+            }
+        }
+
+        @keyframes sun {
+            from {
+                background-color: red;
+            }
+
+            to {
+                background-color: red;
+                box-shadow: 100px 100px 100px yellow;
+            }
+        }
+
+        @keyframes maybay {
+            0% {
+                transform: translate(0, 0);
+            }
+
+            50% {
+                transform: translate(500px, 0);
+            }
+
+            100% {
+                transform: translate(0, 0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="sky">
+        <div class="sun"></div>
+        <div class="cloud">
+            <div class="cloud1"></div>
+            <div class="cloud2"></div>
+            <div class="cloud3"></div>
+        </div>
+
+    </div>
+    <div class="nui">
+        <div class="nui1"></div>
+        <div class="nui2"></div>
+        <div class="nui3"></div>
+        <div class="dengiaothong">
+            <div class="den">
+                <div class="xanh"></div>
+                <div class="vang"></div>
+                <div class="do"></div>
+            </div>
+            <div class="cot"></div>
+        </div>
+    </div>
+
+    <div class="road">
+        <div class="gach"></div>
+        <div class="gach"></div>
+        <div class="gach"></div>
+        <div class="gach"></div>
+        <div class="gach"></div>
+        <div class="gach"></div>
+
+        <div class="car-red">
+            <div class="head"></div>
+            <div class="body"></div>
+            <div class="b1"></div>
+            <div class="b2"></div>
+        </div>
+
+        <div class="car-blue">
+            <div class="head"></div>
+            <div class="body"></div>
+            <div class="b1"></div>
+            <div class="b2"></div>
+        </div>
+    </div>
+</body>
+
+</html>

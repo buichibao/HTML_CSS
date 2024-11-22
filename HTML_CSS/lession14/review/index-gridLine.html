@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: grid;
+        }
+        /* Nếu dùng hàng thì sử udngj thuộc tính grid-row: start_line / end_line; */
+        /* Nếu dùng cột thì sử udngj thuộc tính grid-column: start_line / end_line; */
+        header {
+            height: 100px;
+            background-color: red;
+            grid-row: 1/2;
+            grid-column: 1/4;
+        }   
+        nav {
+            height: 400px;
+            background-color: yellow;
+            grid-row: 2/4;
+            grid-column: 1/2;
+        }
+        #noidung1 {
+            height: 200px;
+            background-color: blue;
+            grid-row: 2/3;
+            grid-column: 2/4;
+        }
+        #noidung2 {
+            height: 200px;
+            background-color: green;
+            grid-row: 3/4;
+            grid-column: 2/3;
+        }
+        #noidung3 {
+            height: 200px;
+            background-color: aqua;
+            grid-row: 3/4;
+            grid-column: 3/4;
+        }
+        footer {
+            height: 100px;
+            background-color: plum;
+            grid-row: 4/5;
+            grid-column: 1/4;
+        }
+    </style>
+</head>
+<body>
+    <header>Header</header>
+    <nav>Menu</nav>
+    <section id="noidung1">Nội dung 1</section>
+    <section id="noidung2">Nội dung 2</section>
+    <section id="noidung3">Nội dung 3</section>
+    <footer>Footer</footer>
+</body>
+</html>

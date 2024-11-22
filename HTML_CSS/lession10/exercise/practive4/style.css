@@ -1,0 +1,43 @@
+div.banner {
+    height:200px;
+    background-color: aquamarine;
+    position: relative;
+}
+div.banner h3 {
+    width: 50%;
+    color: aliceblue;
+    left: 100px;
+    top:50px;
+    position: absolute;
+}
+
+div.banner .list {
+    width: 100%;
+    top:150px;
+    position: absolute;
+}
+
+div.banner .list .item {
+    width: 30%;
+    height: 300px;
+    background-color: whitesmoke;
+    float: left;
+    margin-left: 35px;
+    position: relative;
+}
+
+div.banner .list .item .content{
+    width: 350px;
+    top: 50px;
+    left: 32px;
+    position: absolute;
+}
+
+div.banner .list .item i {
+    font-size: 40px;
+    color: rgb(0, 255, 98);
+}
+
+div.banner .list .item h6 {
+    margin: 15px 0px;
+}

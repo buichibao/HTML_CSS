@@ -1,0 +1,12 @@
+.v-start {
+    color: red;
+    font-size: 30px;
+}
+
+.highlight {
+    color: blue;
+    font-variant: small-caps;
+}
+a {
+    font-size: 20px;
+}

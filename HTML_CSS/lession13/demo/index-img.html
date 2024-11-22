@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img.img1 {
+            width: 200px;
+            height: 200px;
+            outline: 1px solid red;
+
+            /* Thuộc tính object-fit dùng để tùy chỉnh hình ảnh phù hợp với vùng chứa hình. 
+                Trường hợp này chỉ dùng khi width và height của img nhỏ hơn so với kích thước ban đầu của hình ảnh */
+            /* Giá trị fill mặc định. Sẽ tựu động lấp đầy vùng chứa img */
+            /* Giá trị contain giữ nguyên tỷ lệ ban đầu của hình ảnh */
+            /* object-fit: contain; */
+            /* Giá trị cover giữ nguyên tỷ lệ ban đầu của hình ảnh và sẽ cắt bớt hiển thị hình cho phù hợp với tỷ lệ */
+            /* object-fit: cover; */
+            /* object-fit: none; */
+            /* Giá trị scale-down: lấy theo kích thước của none hoặc contain. nếu 1 trong 2 giá trị này giá trị nao bé hơn thì sẽ chọn cái đó */
+            /* object-fit: scale-down; */
+
+            /* Định vị ví trí của hình ảnh sau khi đã thay đổi tùy chỉnh kích thước hình ảnh phù hợp: objec-position: x y;  */
+            object-position: -40px 0px;
+            object-fit: cover;
+        }
+        img.img2 {
+            /* Thuộc tính scale dùng để zoom phần tử. Giá trị âm thì đảo ngược phần tử, dương thì như bình thường với giá trị từ 0 trở lên và mặc định là 1 là không zoom */
+            /* scale: x y z; */
+            scale: 1; /* ko zoom */
+        }
+        img.img2:hover {
+            scale: 1.1;
+        }
+        h1 {
+            scale: 1;
+        }
+        h1:hover {
+            /* x và y */
+            scale: 1 1.2;
+        }
+    </style>
+</head>
+<body>
+    <img class="img1" src="../kieu chup hinh dep cho nu 2.jpg" alt="">
+    <img class="img2" src="../kieu chup hinh dep cho nu 2.jpg" alt="">
+    <h1>Hello world</h1>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div1 {
+            /* Muôn thay đổi kích thước content */
+            width: 300px;
+            height: 200px;
+            /* Khoảng cách từ ngoài tính vô content là padding.Padding tăng thêm kích thước cho box-model */
+            /*Cả 4 hướng */
+            /* Xác định thông qua 1 giá trị */
+            padding: 1em;
+            /* Xác định thông qua 2 giá trị: top-bottom left-right */
+            padding: 1em 2em;
+            /* Xác định thông qua 4 giá trị: top right bottom left */
+            padding: 1em 2em 3em 4em;
+
+            /* Chi tiết từng hướng */
+            /* padding-top: ;
+            padding-left: ;
+            padding-right: ;
+            padding-bottom: ; */
+
+            /* Margin: khoảng cách tính từ viền ra ngoài. Margin không thay đổi kích thước của box model.
+            Cách dùng y như padding */
+            margin: 1em 2em;
+
+            /* Viển của box-model. Có ảnh hưởng đến kích thước của box-model
+            CP: border: độ_dày kiểu_viền màu_sắc */
+            /* Xác định cả 4 hướng. Ghi chi tiết từng css */
+            border-width: 5px;
+            border-style: double;
+            border-color: red;
+            /* Xác định chi tiết từng hướng */
+            border-top-width: 10px;
+            border-top-color: orange;
+            border-top-style: dashed;
+            /* Xác định 4 hướng viết tắt */
+            border: dotted blue 1em;
+            /* Xấc định từng hướng viết tắt */
+            border-top: dashed red 1em;
+            /* border-left: ;
+            border-right: ;
+            border-bottom: ; */
+        }
+    </style>
+</head>
+<body>
+    <div class="div1">Hello world</div>
+</body>
+</html>

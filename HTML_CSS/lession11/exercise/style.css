@@ -1,0 +1,319 @@
+*{
+   
+}
+header {
+    width: 100%;
+    height: 120px;
+    background-color: #ee4d2d;
+    color: aliceblue;
+    font-size: smaller;
+}
+
+header .container-header {
+    width: 90%;
+    height: 20px;
+    margin: 0 auto;
+
+
+}
+
+header .container-header .header-left {
+    width: 50%;
+    float: left;
+}
+
+header .container-header .header-right {
+    width: 30%;
+    float: right;
+}
+
+
+header .container-header ul {
+    margin: 0 0 10px;
+}
+
+header .container-header ul li {
+    list-style-type: none;
+    float: left;
+    margin-left: 10px;
+}
+
+header .container-header .header-foot {
+    clear: both;
+    width: 100%;
+    line-height: 50px;
+    position: relative;
+}
+
+header .container-header .header-foot .logo-shop {
+    width: 20%;
+    float: left;
+    position: absolute;
+    left: 30px;
+}
+
+header .container-header .header-foot .logo-shop img {
+    width: 180px;
+}
+
+header .container-header .header-foot .search {
+    width: 60%;
+    height: 90px;
+    float: left;
+    top: 10px;
+    left: 250px;
+    position: absolute;
+
+}
+
+.search .list-search ul li {}
+
+header .container-header .header-foot .search input {
+    width: 800px;
+    height: 40px;
+    border-radius: 2px;
+    border: none;
+}
+
+header .container-header .header-foot .logo-cart {
+    width: 20%;
+    float: right;
+    font-size: 30px;
+    top: 20px;
+    position: relative;
+}
+
+main {
+    width: 85%;
+    margin: 10px auto;
+}
+
+.banner {
+    width: 100%;
+    height: 234px;
+ 
+}
+
+
+.banner .banner-left {
+    width: 59%;
+    height: 100%;
+    float: left;
+    margin-right: 8px;
+}
+
+.banner .banner-left img {
+    width: 100%;
+    height: 100%;
+    border-radius: 2px;
+}
+
+.banner .banner-right-1 {
+    width: 40%;
+    height: 116px;
+    float: left;
+    margin-bottom: 2px;
+
+}
+
+.banner .banner-right-1 img {
+    width: 100%;
+    height: 100%;
+    border-radius: 2px;
+}
+
+.banner .banner-right-2 {
+    width: 40%;
+    height: 116px;
+    float: left;
+
+
+}
+
+.banner .banner-right-2 img {
+    width: 100%;
+    height: 100%;
+    border-radius: 2px;
+}
+
+.nav-item .list-item {
+  width: 100%;
+}
+
+.nav-item  .list-item .item{
+    width: 12.5%;
+    float: left;
+    text-align: center;
+    position: relative;
+    top:30px;
+}
+
+.nav-item  .list-item .item i{
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 15px;
+}
+
+.nav-item  .list-item .item p {
+    margin-top: 20px;
+}
+
+.sale {
+    width: 100%;
+    margin: 10px auto;
+}
+
+.sale .banner-sale {
+    width: 100%;
+    height: 105px;
+    margin-bottom: 10px;
+}
+
+.sale .banner-sale img {
+    width: 100%;
+    height: 100%;
+}
+
+.sale .list-product-sale{
+    width: 100%;
+    height: 370px;
+    background-color: #ee4d2d;
+    color: aliceblue;
+}
+.list-product-sale .sale-time {
+    width: 100%;
+    height: 50px;
+    text-align: right;
+    align-items: center;
+    margin-bottom: 10px;
+    background-color: rgb(255, 111, 0);
+}
+
+.product-sale-left {
+    width: 50%;
+    float: left;
+}
+.product-sale-right{
+    width: 50%;
+    float: left;
+}
+.header-sale>h5{
+    width: 50%;
+    float: left;
+}
+.header-sale>p{
+    width: 45%;
+    float: left;
+    text-align: end;
+}
+.list-item-sale .item-sale {
+    width: 33%;
+    height: 250px;
+    background-color: aliceblue;
+    color: #ee4d2d;
+    margin: 1px;
+    float: left;
+    text-align: center;
+}
+.list-item-sale .item-sale img{
+    width: 100%;
+}
+
+.hot {
+    width: 100%;
+    margin: 0;
+    border: 1px solid gainsboro;
+}
+
+.hot .header-hot{
+    width: 100%;
+    height: 50px;
+    border-bottom: 1px solid gainsboro;
+    color: #ee4d2d;
+    padding-top: 10px;
+}
+
+.hot .header-hot h5{
+    width: 90%;
+    float: left;
+    margin: 0;
+    padding-left: 30px;
+}
+
+.hot .header-hot p{
+    width: 10%;
+    float: left;
+    margin: 0;
+}
+
+.hot .footer-hot {
+    width: 100%;
+
+}
+
+.hot .footer-hot .item{
+    width: 16%;
+    height: 100%;
+    margin-right: 8px;
+    float: left;
+}
+
+.hot .footer-hot .item img{
+    width: 100%;
+}
+
+.footer-hot .item {
+    position: relative;
+}
+.footer-hot .item .image p.top{
+    width: 30px;
+    height: 30px;
+    background-color: #ee4d2d;
+    color: aliceblue;
+    position: absolute;
+    top: 10px;
+}
+
+.footer-hot .item .image p.count{
+    text-align: center;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    bottom:50px;
+    position: absolute;
+}
+
+.suggest .banner-suggest{
+  clear: both;
+  width: 100%;
+  height: 50px;
+  border-bottom: 2px solid #ee4d2d;
+  border-top: 1px solid gainsboro;
+  border-left: 1px solid gainsboro;
+  border-right: 1px solid gainsboro;
+  text-align: center;
+  padding-top: 15px;
+}
+
+.suggest .list-product{
+    width: 100%;
+    height: 250px;
+
+}
+
+.suggest .list-product .product{
+    width: 16%;
+    margin-left: 8px;
+    float: left;
+    border: 1px solid gainsboro;
+    box-shadow: 0 0 2px slategrey;
+}
+
+.suggest .list-product .product img{
+    width: 100%;
+}
+
+
+
+
+
+

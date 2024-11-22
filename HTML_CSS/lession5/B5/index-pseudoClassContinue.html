@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Chữ cái đầu tiên của thẻ <p> */
+        p::first-letter {
+            font-weight: bold;
+            font-style: italic;
+            color: red;
+            font-size: 40px;
+        }
+        /* Hàng văng bản đầu tiên của thẻ <p> */
+        p::first-line {
+            color: blue;
+            font-variant: small-caps;
+        }
+        p span.name {
+            text-decoration: underline;
+            color: aqua;
+        }
+        p span.phone {
+            font-style: italic;
+            color: green;
+        }
+        p span:last-child {
+            text-decoration: overline;
+            color: greenyellow;
+        }
+        p span:first-child {
+            font-weight: bold;
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        <span>Thông tin</span><br>
+        Hello mọi người<br>
+        Tôi tên là: <span class="name">Nguyễn Văn An</span><br>
+        Số điện thoại: <span class="phone">0905123123</span><br>
+        Địa chỉ: <span>Đà Nẵng</span>
+    </p>
+</body>
+</html>

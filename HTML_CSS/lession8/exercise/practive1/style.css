@@ -1,0 +1,77 @@
+/* Bảng 1  */
+.table-1 {
+    border: 1px solid black;
+}
+
+.table-1 tr>td, .table-1 tr>th{
+    border: 1px solid black;
+    
+}
+
+.table-1 tr>td{
+    padding-right: 40px;
+}
+
+.table-1 tr>th:first-child{
+    background-color: palevioletred;
+}
+
+.table-1 tr>th:last-child{
+    background-color: rgb(0, 115, 255);
+}
+
+.green {
+   background-color: chartreuse;
+}
+.orange {
+    background-color: chocolate;
+}
+.red {
+    background-color: rgb(210, 57, 30);
+}
+.blue {
+    background-color: rgb(24, 51, 200);
+}
+.yellow {
+    background-color: rgb(207, 210, 30);
+}
+.pink {
+    background-color: rgb(210, 30, 207);
+}
+.brown {
+    background-color: rgb(118, 41, 11);
+}
+
+/* Bảng 2 */
+.table-2 {
+  background-color: palevioletred;
+}
+.table-2 , .table-2 tr>td , .table-2 tr>th{
+    border: 1px solid black;
+}
+
+.table-2 tr>td {
+    padding-right: 50px;
+}
+
+.table-2 tr>th{
+    padding: 0px 100px;
+}
+
+/* Bảng 3 */
+
+.table-3 , .table-3 tr>td{
+    border: 1px solid black;
+}
+
+.table-3 tr>td{
+    padding: 0 40px;
+}
+
+.table-3 tr .marketing{
+    background-image: url('https://img.pikbest.com/wp/202405/milky-way-galaxy-starry-night-sky-and-bold-purple-blue-a-vertical-3d-illustration-of-the-universe_9831177.jpg!w700wp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: chartreuse;
+}
+

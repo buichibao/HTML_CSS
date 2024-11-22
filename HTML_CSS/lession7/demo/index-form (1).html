@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        fieldset {
+            width: 500px;
+            border-radius: 5px;
+        }
+        /* CSS cho input nào đang được sử dụng thì sử dụng trạng thái focus */
+        input:focus {
+            outline: 1px solid green;
+            border: 2px solid green;
+            border-radius: 3px;
+            box-shadow: 0 0 5px greenyellow;
+            color: blue;
+        }
+        /* CSS cho các control bị vô hiệu hóa disabled */
+        input:disabled, button:disabled {
+            background-color: red;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- FORM: phần tử dùng để gửi HTTPREQUEST từ phía client về server có kèm theo dữ liệu. Nếu ko kèm dữ liệu thì dùng thẻ <a> -->
+    <!-- Form nó có 3 thuộc tính chính:
+         + action: thuộc tính này dùng để chỉ định URL để gửi về phía server (giống với href của thẻ a) 
+         + method: 2 giá trị get và post (Mặc định là get ko không khai báo method). GET chỉ dùng khi dữ liệu ko quan trọng còn post thì dùng với dữ liệu quan trọng 
+         + enctype: thuộc tính chỉ định mã hóa dữ liệu khi gửi request. thuộc tính này chỉ hoạt động với method post
+                    - application/x-www-form-urlencoded (mặc định): luôn được mã hóa ký tự
+                    - multipart/form-data: mã hóa ký tự và file. Để gửi kèm thêm file phải luôn là giá trị này
+                    - text/plain: ko đc mã hóa -->
+    <form action="#" method="post" enctype="multipart/form-data">
+        <!-- LƯU Ý: name là thuộc tính để server nhận được dữ liệu khi chúng ta gửi form đến server -->
+        <!-- hidden: input gửi dữ liệu đi kèm về server nhưng ko muốn ng dùng nhìn thấy. Khi dùng hidden nhớ bổ sung value -->
+        <input type="hidden" name="ma" value="abc">
+        <!-- <label>: phần tử dùng để mô tả input. Thuộc tính for của label sẽ tham chiếu tới input thông qua id -->
+        <label for="ttk">Tên tài khoản:</label>
+        <!-- Nhập ký tự trên 1 hàng -->
+        <input type="text" name="tentaikhoan" id="ttk" placeholder="Mời nhập tên tài khoản"><br>
+        <!-- Nhập mật khẩu -->
+        <label for="mk">Mật khẩu:</label>
+        <input type="password" name="matkhau" id="mk"><br>
+        <!-- Thuộc tính readonly chỉ đọc input không cho thay đổi giá trị -->
+        <label for="">Mã định danh: </label><input type="text" value="112054" readonly><br>
+        <!-- Thuộc tính disabled dùng để vô hiệu hóa control -->
+        <button disabled>Đăng ký tăng lương</button><br>
+        <!-- Nhập email -->
+        <label for="email">Email: </label>
+        <!-- tabindex dùng để đánh số thứ tự khi tab -->
+        <input tabindex="1" type="email" name="email" id="email"><br>
+        <!-- Chọn màu sắc -->
+        <label for="color">Màu yêu thích: </label>
+        <input type="color" name="mauyeuthich" id="color"><br>
+        <!-- FIle: dung để upload file từ phía trình duyệt lên server -->
+        <input type="file" name="hinhdaidien"><br>
+        <!-- radio: Chọn 1 trong nhiều giá trị có sẵn (Danh sách các giá trị ít, dưới 4 giá trị). 
+        name là thuộc tính dùng để nhóm radio. khi nhóm thì name phải giống nhau.
+        Để nhận được dữ liệu ở phía server sau khi dùng radio thì phải sử dụng thêm thuộc value -->
+        <b>Giới tính: </b>
+        <input type="radio" name="gioitinh" value="Nam"><i>Nam</i>
+        <input type="radio" name="gioitinh" value="Nữ"><i>Nữ</i>
+        <input type="radio" name="gioitinh" value="Khác"><i>Khác</i>
+        <br>
+        <!-- checkbox: Chọn nhiều trong nhiều giá trị có sẵn (Danh sách các giá trị ít). 
+        name là thuộc tính dùng để nhóm checkbox. khi nhóm thì name phải giống nhau.
+        Để nhận được dữ liệu ở phía server sau khi dùng radio thì phải sử dụng thêm thuộc value  -->
+        <b>Sở thích: </b>
+        <input type="checkbox" name="sothich" value="Đá bóng"><i>Đá bóng</i>
+        <input type="checkbox" name="sothich" value="Nghe nhạc"><i>Nghe nhạc</i>
+        <input type="checkbox" name="sothich" value="Xem phim"><i>Xem phim</i>
+        <br>
+        <!-- Select - option: chia làm 2 loại
+            - Combobox: chọn 1 trong nhiều giá trị có sẵn (danh sách dữ liệu có sẵn thoải mái bao nhiêu cũng đc) -->
+        <label for="role">Bộ phận:</label>
+        <select name="vaitro" id="role">
+            <option value="nhân viên">Nhân viên</option>
+            <option value="quản lý">Quản lý</option>
+            <option value="trưởng phòng">Trường phòng</option>
+        </select>
+        <br>
+        <!-- - Listbox: chọn nhiều trong nhiều giá trị có sẵn (danh sách dữ liệu thoải mái). Muốn dùng listbox thì bổ sung thuộc tính multiple. size là thuộc tính chỉ định số lượng giá trị hiển thị ra-->
+        <label for="bc">Bằng cấp:</label>
+        <select name="bangcap" id="bc" multiple size="5">
+            <option value="THCS">Bằng cấp 2</option>
+            <option value="THPT">Bằng cấp 3</option>
+            <option value="Cao đẳng">Cao đẳng</option>
+            <option value="Đại học">Đại học</option>
+            <option value="Thạc sĩ">Thạc sĩ</option>
+            <option value="Tiến sĩ">Tiến sĩ</option>
+        </select>
+
+        <br>
+        <!-- Nhóm các điều khiển(control) trong form thì sử dụng fieldset -->
+        <fieldset>
+            <!-- <legend> dùng để tạo tiêu đề cho từng nhóm -->
+            <legend>Nút sử dụng phần tử Input</legend>
+            <!-- tạo nút là phần tử độc lập thì dùng input -->
+            <!-- input: submit dùng để gửi form đi về server. Để thay đổi văn bản hiển thị ở nut này thì dùng value -->
+            <input type="submit" value="Đăng ký" />
+            <!-- input: reset dùng để reset lại tất cả input trong form về ban đầu -->
+            <input type="reset">
+            <!-- input: button dùng để tạo ra nút không có tác dụng gì hết (thường dùng để viết mã JS) -->
+            <input type="button" value="Viết mã JS tại đấy">
+            <!-- input: image giống với nút submit nhưng khi hiển thị thì có thể đưa vào hình ảnh trong này -->
+            <input type="image" src="../kieu chup hinh dep cho nu 2.jpg" width="200px" height="50px"
+                style="vertical-align: middle;">
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Nút sử dụng phần tử button</legend>
+            <!-- tạo nút là phần tử chứa để thêm nội dugn bên trong thì dùng button -->
+            <!-- button mặc định là submit -->
+            <button>Đăng nhập</button>
+            <button type="submit">
+                <img src="../kieu chup hinh dep cho nu 2.jpg" width="20px" height="10px" alt="">
+                Hello mọi người
+            </button>
+            <!-- button reset -->
+            <button type="reset">Đặt lại</button>
+            <!-- button dùng để viết mã js -->
+            <button type="button">Viết JS</button>
+        </fieldset>
+        <label for="dc">Địa chỉ</label>
+        <!-- Nhập ngày giờ -->
+        <fieldset>
+            <legend>Làm việc với thời gian</legend>
+            <input type="date">
+            <input type="datetime">
+            <input type="time">
+            <input type="week">
+            <input type="month">
+        </fieldset>
+        <!-- Nhập giá trị số -->
+        <fieldset>
+            <legend>Làm việc với giá trị số</legend>
+            <!-- Nhập số -->
+            <input type="number">
+            <!-- Nhập khoảng phạm vi số -->
+            <input type="range">
+        </fieldset>
+        <label for="dc">Địa chỉ:</label>
+        <!-- text-area: dùng để nhập ký tự trên nhiều hàng (có enter xuống dòng).
+            Có thể chỉ định kích thước thông qua 2 thuộc tính: cols (số lượng ký tự hiển thị) và rows (số hàng hiển thị) -->
+        <textarea name="diachi" id="dc" cols="10" rows="5"></textarea>
+        <br> 
+        <label for="timkiem">Tìm kiếm: </label>
+        <input type="text" list="myList">
+        <datalist id="myList">
+            <option value="Samsung">
+            <option value="Samsung Note 10">
+            <option value="Iphone">
+            <option value="Acer">
+        </datalist>
+    </form>
+</body>
+
+</html>

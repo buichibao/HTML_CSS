@@ -1,0 +1,28 @@
+table,table tr>td{
+   border: red 1px solid;
+}
+
+img {
+    width: 120px
+}
+
+.black{
+    width: 150px;
+    background-color: black;
+}
+
+.small{
+    width: 30px;
+}
+
+.marketing{
+    text-align: end;
+    font-weight: bold;
+    color: blue;
+}
+
+.life {
+    text-align: center;
+    font-weight: bold;
+    color: red;
+}

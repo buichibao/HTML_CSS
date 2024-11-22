@@ -1,0 +1,50 @@
+header {
+    width: 100%;
+    height: 100px;
+    background-color: aqua;
+    text-align: center;
+}
+
+main {
+    height: 500px;
+    display: flex;
+    text-align: center;
+}
+
+main aside:first-child {
+    width: 25%;
+    background-color: yellow;
+
+}
+
+main article {
+    width: 50%;
+    background-color: brown;
+}
+
+main article ul {
+    margin: 5px 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+main article ul li {
+    list-style-type: none;
+    width: 15%;
+    background-color: orange;
+    padding: 15px 0;
+}
+
+main aside:last-child {
+    width: 25%;
+    background-color: blueviolet;
+
+}
+
+footer {
+    background-color: green;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+}

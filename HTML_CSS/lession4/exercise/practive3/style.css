@@ -1,0 +1,45 @@
+*{
+    font-family: Arial, sans-serif;
+}
+div.container{
+    width: 1200px;
+    height: 650px;
+    background-image: url(./images/background-Mec-2.png);
+    background-repeat: no-repeat;
+    background-size: 1200px 550px;
+    text-align: center; 
+    
+}
+
+div.container{
+    padding-top: 120px;
+}
+div>h1{
+    color: red;
+}
+.list-car>img{
+    width: 250px;
+}
+.name-car{
+    color: red;
+    font-weight: bold;
+    text-align: center;
+}
+.name-car{
+    letter-spacing: 10px;
+    word-spacing: 170px;
+}
+.buy{
+    color: aliceblue;
+    width: 400px;
+    line-height: 40px;
+    background-color: red;
+    border-radius: 50px;
+    box-shadow: inset 0 0 10px rgb(65, 12, 12);
+    margin: 0 auto;
+}
+
+.buy:hover{
+    box-shadow: 0 0 10px red;
+}
+

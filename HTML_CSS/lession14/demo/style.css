@@ -1,0 +1,86 @@
+body {
+    display: grid;
+}
+header {
+    background-color: red;
+    height: 80px;
+    grid-row: 1/2;
+    grid-column: 1/4;
+}
+header ul {
+    display: flex;
+    margin: 0;
+    gap:20px;
+    justify-content: center;
+}
+header ul>li {
+   list-style-type: none;
+   background-color: rgb(152, 173, 173);
+   padding: 10px 20px;
+   margin-top: 20px;
+
+}
+header ul>li a{
+    text-decoration: none;  
+    color: aliceblue;
+ }
+aside.left {
+    height: 500px;
+    background-color: yellow;
+    grid-row: 2/3;
+    grid-column: 1/2;
+}
+/* aside.left ul{
+    margin: 0;
+    text-align: center;
+}
+aside.left ul>li{
+   background-color: aquamarine;
+   list-style-type: none;
+   height: 30px;
+  
+} 
+aside.left ul>li a{
+    text-decoration: none;
+    color: black;
+} */
+ aside.left nav{
+    
+    display: flex;
+    flex-flow: wrap column;
+ }
+ aside.left div{
+    text-align: center;
+   width: 100%;
+   background-color: aqua;
+ }
+main {
+    background-color: blue;
+    grid-row: 2/3;
+    grid-column: 2/3;
+}
+main ul{
+    display: flex;
+    margin: 0;
+    gap:20px;
+    justify-content: center;
+    align-content: center;
+}
+main ul>li{
+   list-style-type: none;
+}
+main ul>li a{
+   text-decoration: none;
+   color: aliceblue;
+}
+aside.right {
+    background-color: pink;
+    grid-row: 2/3;
+    grid-column: 3/4;
+}
+footer {
+    height: 80px;
+    background-color: green;
+    grid-row: 3/4;
+    grid-column: 1/4;
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Tạo thanh cuộn nội dung tự động chạy trong HTML -->
+    <!-- vspace: tạo không gian cho marquee theo chiều dọc (giống margin top và bottom) -->
+    <!-- hspace: tạo không gian cho marquee theo chiều ngang (giống margin left và right) -->
+    <marquee width="500px" behavior="" direction="" hspace="5%" vspace="10%" bgcolor="green">
+        Hello world
+        <img src="../kieu chup hinh dep cho nu 2.jpg" alt="">
+    </marquee>
+    <!-- Thuộc tính direction : hướng của marquee (left là mặc định, right, up, down)-->
+    <!-- Thuộc tính behavior: kiểu cuộn (sliding, scroll, alternate(luân phiên)) -->
+    <marquee behavior="alternate" width="200px" direction="right">Hello world</marquee>
+    <!-- THuộc tính scrollamount: tốc độ cuộn nhanh hay chậm (0 là đứng im) -->
+    <marquee scrollamount="1" height="200px" behavior="" direction="down">Hello world</marquee>
+    <!-- Thuộc tính loop: số lần cuộn -->
+    <marquee bgcolor="red" loop="2" height="200px" behavior="" direction="up">Hello world</marquee>
+</body>
+
+</html>

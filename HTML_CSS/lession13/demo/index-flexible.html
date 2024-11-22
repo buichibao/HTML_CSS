@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* FLEXIBLE (flex) dùng để chỉ định bố cục căng chỉnh vùng chứa
+        - Vùng chứa là flex-container 
+        - Phần tử bên trong vùng chưa là flex-item
+        - FLEX hoạt động theo 2 hướng : 
+            + Hướng chính là ngang (mặc định) (main-axis)
+            + HƯớng phụ là dọc (cross axis) */
+
+        div.content {
+            width: 1000px;
+            height: 500px;
+            outline: 1px solid red;
+
+            /* Khi sử dụng thuộc tính này thì .content sẽ thành flex-container */
+            display: flex;
+
+            /* Muốn thay đổi sắp xếp các item theo trục khác nhau thì dùng flex-direction: row(mặc định) hoặc column(dọc)
+                Muốn lật ngược thì chọn giá trị có chứa reverse */
+            flex-direction: row;
+
+            /* Sắp xếp các flex-item theo trục ngang 1 cách linh hoạt thì dùng justify-content */
+            /* giá trị flex-start là bắt đầu từ bên trái */
+            /* justify-content: flex-start; */
+            /* giá trị flex-end là bắt đầu từ cuối (phải) */
+            /* justify-content: flex-end; */
+            /* center là ngay giữa */
+            justify-content: center;
+            /* giá trị space-between: giãn đều các item */
+            /* justify-content: space-between; */
+            /* giá trị space-around: giãn đều các item và có 1 tí padding left right */
+            /* giá trị space-evenly: giãn đều các item và có padding left right nhiều hơn space-around */
+            /* justify-content: space-evenly; */
+
+            /* Sắp xếp các flex-item theo trục dọc 1 cách linh hoạt thì dùng align-items */
+            /* Giá trị flex-start mặc định là hiển thị trên top */
+            align-items: flex-start;
+            /* Giá trị flex-end là hiển thị ở bottom */
+            align-items: flex-end;
+            /* Giá trị center là ngay giữa */
+            align-items: center;
+            /* Giá trị stretch full kích thước chiều cao của vùng chứa. Lưu ý khi dùng giá trị này thì flex-item khoogn được có height */
+            /* align-items: stretch; */
+            /* Giá trị base-line thì sẽ căn chỉnh các flex-item đều nhau ở dòng content đầu tiên của từng flex-item */
+            /* align-items: baseline; */
+
+
+            /* Thuộc flex-wrap dùng để chỉ định tạo hàng mới khi flex-item vượt qua kích thước vùng chưa flex-container */
+            /* Giá trị mặc định là no-wrap */
+            flex-wrap: wrap;
+            /* Muốn chỉ định nhiều hàng flex-item sắp xếp theo trục dọc thì dùng align-content. Lưu ý khi dùng css này thì nhớ flex-wrap */
+            align-content: center;
+            /* Thuộc tính này sử dụng được space-between, space-around và space-evenly để giãn đều giống khi dùng justify-content */
+            /* align-content: space-evenly; */
+
+            /* Thuộc tính flex-flow: flex-direction flex-wrap dùng viết nhanh */
+            flex-flow: row wrap;
+
+            /* Thuộc tính gap dùng để chỉ khoảng cách giữa các flex-item */
+            /* Cả 4 phía */
+            gap: 10px;
+            /* Dọc Ngang */
+            gap: 10px 20px;
+        }
+        div.content div {
+            width: 100px;
+            /* height: 100px; */
+            background-color: red;
+            /* margin: 10px; */
+            color: white;
+
+            /* Khi .content là display thì các div bên trong này sẽ thành flex-item */
+        }
+        div.content div:first-child {
+            /* Thuộc tính bố trí theo trục dọc cho 1 phần tử flex-item riêng lẻ là align-self
+                Thuộc tính này sẽ ghi đề vị trí của flex-item nào đó sau khi đã sử dụng align-items cho tất cả phần tử flex-item */
+            align-self: center;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="content">
+        <!-- Muốn thay đổi vị trí của các flex-item thì dùng thuộc tính order=vị trí -->
+        <div style="order: 5;">1</div>
+        <div style="order: 2;">2</div>
+        <div style="order: 3;">3</div>
+        <div style="order: 6;">4</div>
+        <div style="order: 1;">5</div>
+        <div style="order: 4;">6</div>
+        <div style="order: 7;">7</div>
+        <div style="order: 7;">8</div>
+        <div style="order: 7;">9</div>
+        <div style="order: 7;">10</div>
+        <div style="order: 7;">11</div>
+        <div style="order: 7;">12</div>
+    </div>
+</body>
+</html>
