@@ -1,0 +1,62 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+div.header {
+    width: 100%;
+    height: auto;
+}
+
+nav {
+    height: 50px;
+    display: flex;
+    background-color: aqua;
+    position: relative;
+}
+
+ul {
+    width: 90%;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    transition: all linear 5s;
+}
+
+nav>ul>li {
+    list-style-type: none;
+    padding: 20px;
+    vertical-align: middle;
+    background-color: aqua;
+}
+
+div.image {
+    width: 10%;
+    justify-content: end;
+}
+
+div.image:hover+ul {
+    display: block;
+}
+
+div.image img {
+    width: 50%;
+    padding: 12px 20px;
+    display: none;
+}
+
+@media screen and (max-width:1000px) {
+    div.image img {
+        display: block;
+    }
+
+    ul {
+        position: absolute;
+        width: 100%;
+        display: none;
+        margin: 0;
+        padding: 0;
+        top: 50px;
+        left: 0;
+    }
+}
