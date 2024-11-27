@@ -1,0 +1,42 @@
+div.card {
+    width: 250px;
+    height: 350px;
+    perspective: 500px;
+    position: relative;
+    margin: 100px auto;
+}
+div.card:hover img{
+    transform: translateY(-50px);
+}
+div.card:hover div.backgound{
+    transform: rotateX(30deg);
+}
+
+div.card:hover p{
+    opacity: 1;
+}
+div.backgound{
+    width: 100%;
+    height: 100%;
+    background-color:wheat;
+    border-radius: 5px;
+    outline: 1px snow orange;
+    position: absolute;
+    transition: all linear .5s;
+}
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position:-160px; 
+    position: absolute;
+    transition: all linear .5s;
+}
+p {
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    top:300px;
+    opacity: 0;
+    transition: all linear .5s .5s;
+}
